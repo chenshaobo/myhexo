@@ -1,9 +1,10 @@
-title: Cowboy路由机制
-date: 2015-10-22 16:41:45
-tags: [Erlang,Cowboy,Http]
+title: Cowboy的路由机制
+date: 2015-10-22 18:24:56
+tags: [Cowboy]
 ---
 
-#####路由机制
+路由机制
+=====
 配置链接URL到Erlang模块（处理对应请求的模块）的映射就是路由。
 
 当 Cowboy接收到一个请求时，它会尝试在给定的分发规则中匹配 域名 到对应的资源路径。如果匹配成功，那么对应的Erlang 模块就会被执行。
@@ -13,7 +14,8 @@ Cowboy首先会匹配域名，接着尝试找到匹配的资源路径。
 Cowboy会将路由规则编译后，再使用。
 
 
-#####结构
+结构
+=====
 通用的路由结构是这样定义的：
 `Routes= [Host1, Host2, ... HostN].`
 
@@ -29,7 +31,8 @@ Cowboy会将路由规则编译后，再使用。
 `Path1= {PathMatch, Handler, Opts}.`
 `Path2= {PathMatch, Constraints, Handler, Opts}.`
 
-#####匹配规则语法
+匹配规则语法
+=====
 匹配语法规则用于标识 域名到路径间的处理handlers。
 域名的语法规则：
 `HostMatch1= "cowboy.example.org".`
@@ -47,7 +50,8 @@ Cowboy会将路由规则编译后，再使用。
 把test绑定到subdomain，而wild_cowboy_legendary就会绑定到name，它们可以被cow_req:binding/{2,3}中检索，绑定的名字必须是一个atom
 '_'：表示匹配任何内容
 
-#####约束
+约束
+=====
 匹配域名和路径完成后，就会检测是否满足可选的约束，约束如下：
 ```erlang
 {Name, int}
@@ -73,9 +77,14 @@ function约束，将会调用给定的约束函数并且返回结果，给定函
 如果定义好的路由分发规则有错误，cowboy_router:compile/1 
 将会返回{error, badarg}
 
-#####在线更新路由规则
+在线更新路由规则
+=====
 通过 cowboy:set_env/3更新路由的分发规则，连接监听模块接受新的连接时就会使用新的路由分发规则。
 ```erlang
     cowboy:set_env(my_http_listener, dispatch,
     cowboy_router:compile(Dispatch)).
 ```
+
+
+
+
