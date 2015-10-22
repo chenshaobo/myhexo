@@ -1,2 +1,0 @@
-# myhexo
-myhexo source content
