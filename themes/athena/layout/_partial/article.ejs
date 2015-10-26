@@ -1,0 +1,61 @@
+<article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <% if (post.link || post.title){ %>
+      <header class="article-header">
+        <%- partial('post/title', {class_name: 'article-title'}) %>
+      </header>
+    <% } %>
+    <%- partial('post/date', {class_name: 'article-date', date_format: 'MM-DD-YYYY'}) %>
+    <%- partial('post/category') %>
+    <%- partial('post/comment_number') %>
+  </div>
+  <div class="article-inner">
+    <div class="article-entry" itemprop="articleBody">
+      <% if (post.excerpt && index){ %>
+        <%- post.excerpt %>
+        <% if (theme.excerpt_link){ %>
+          <p class="article-more-link">
+            <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+          </p>
+        <% } %>
+      <% } else { %>
+  	<% if( !index) { %>
+  	  <%- post.content %>
+  	<% } else { %>
+          <div>
+          <% var br = post.content.indexOf(">\n",350) %>
+  	  <%- post.content.substring(0, br) %>
+          </code></pre>
+          </div>
+  	  <% if (theme.excerpt_link) { %>
+          <h5 class="article-more-link"> <a href="<%- config.root %><%- post.path %>#more"><%= theme.excerpt_link %></a></h5>
+      <% } %>
+  	<% } %>
+        <% } %>
+    </div>
+	<footer class="article-footer">
+      <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link">Share</a>
+      <% if (post.comments && config.disqus_shortname){ %>
+        <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link">Comments</a>
+      <% } %>
+      <%- partial('post/tag') %>
+    </footer>
+  </div>
+  <% if (!index){ %>
+    <%- partial('post/nav') %>
+  <% } %>
+</article>
+
+<% if (!index && config.changyan){ %>
+<section id="comments" sid= "<%- parseInt(date_xml(post.date).replace(/[^0-9]/g,""))  %>" >
+ <!--高速版-->
+<div id="SOHUCS" sid = "<%- parseInt(date_xml(post.date).replace(/[^0-9]/g,""))  %>" ></div>
+<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: 'cys0iXAGa',
+        conf: 'prod_31256952d71e3e29f6c0efe4734eba6f'
+    });
+</script> 
+</section>
+<% } %>
