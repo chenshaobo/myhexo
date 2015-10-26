@@ -7,7 +7,7 @@
       </a>
     </div>
   {% endif %}
-
+   <meta name="google-site-verification" content="B_If4st5-2BJTUBjD9Vrox1VMsF4kUGXbBurE6OL5vI" />
   <div class="custom-logo-site-title">
     <a href="{{ config.root }}"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>

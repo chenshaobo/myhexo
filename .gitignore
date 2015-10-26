@@ -1,1 +1,3 @@
 *.log
+.deploy_git
+public
