@@ -4,7 +4,7 @@
 
 # Site
 title: csbzy' blog
-subtitle: CSB.ZY
+subtitle: In memory of memory
 description: In memory of memory
 author: csbzy
 language: zh-Hans
@@ -63,7 +63,9 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: hexo-theme-next
+#theme: hexo-theme-next
+changyan: true
+theme: athena
 sitemap: 
 path: sitemap.xml
 # Deployment
