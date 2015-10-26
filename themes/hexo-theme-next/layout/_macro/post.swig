@@ -153,7 +153,9 @@
           {% endfor %}
         </div>
       {% endif %}
-
+      {% if is_index %}
+	<hr></hr>
+      {% endif %}
       {% if not is_index and (post.prev or post.next) and not navlessPost %}
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
@@ -175,9 +177,6 @@
       {% endif %}
 
       {% set isLast = loop.index % page.per_page === 0 %}
-      {% if is_index and not isLast %}
-        <div class="post-eof"></div>
-      {% endif %}
     </footer>
   </article>
 

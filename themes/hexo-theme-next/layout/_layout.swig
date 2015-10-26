@@ -20,15 +20,6 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div id="content" class="content"> {% block content %}{% endblock %} </div>
-         <!--高速版-->
-<div id="SOHUCS"></div>
-<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
-<script type="text/javascript">
-    window.changyan.api.config({
-        appid: 'cys0iXAGa',
-        conf: 'prod_31256952d71e3e29f6c0efe4734eba6f'
-    });
-</script>  
         {% if (theme.duoshuo_hotartical and page.title) %}
             <!-- 多说热评文章-->
             <p>热评文章</p>

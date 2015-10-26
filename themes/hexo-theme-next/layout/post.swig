@@ -14,6 +14,15 @@
     {{ post_template.render(page) }}
 
     <div class="post-spread">
+	<!--高速版-->
+<div id="SOHUCS"></div>
+<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: 'cys0iXAGa',
+        conf: 'prod_31256952d71e3e29f6c0efe4734eba6f'
+    });
+</script>    
       {% if theme.jiathis %}
         {% include '_partials/share/jiathis.swig' %}
       {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
