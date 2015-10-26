@@ -5,7 +5,7 @@ menu:
   #about: /about
   archives: /archives
   tags: /tags
-  #commonweal: /404.html
+  commonweal: /404.html
 
 
 # Enable/Disable menu icons.
@@ -86,7 +86,7 @@ toc:
 # Automatically Excerpt
 auto_excerpt:
   enable: true
-  length: 350
+  length: 500
 
 # Use Lato font
 use_font_lato: true
