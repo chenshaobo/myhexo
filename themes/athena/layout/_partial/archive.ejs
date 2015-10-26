@@ -9,10 +9,10 @@
         next_text: 'Next &raquo;'
       }) %>
     </nav>
-  <% } %>
+  <% } %> 
 <% } else { %>
   <% var last; %>
-  <% site.posts.each(function(post, i){ %>
+  <% page.posts.each(function(post, i){ %>
     <% var year = post.date.year(); %>
     <% if (last != year){ %>
       <% if (last != null){ %>
@@ -27,7 +27,7 @@
     <li class="archives">
     <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
   <% }) %>
-  <% if (site.posts.length){ %>
+  <% if (page.posts.length){ %>
     </li></ul>
   <% } %>
 <% } %>
