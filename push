@@ -1,3 +1,7 @@
+
+hexo g
+hexo d
+
 git add .
 git commit -m "add all"
 git push origin master
