@@ -16,15 +16,17 @@ error_log  /var/log/nginx/error.log;
 pid        /var/run/nginx.pid;
 
 #工作模式及连接数上限
+```
 events {
     use   epoll;             #epoll是多路复用IO(I/O Multiplexing)中的一种方式,但是仅用于linux2.6以上内核,可以大大提高nginx的性能
     worker_connections  1024;#单个后台worker process进程的最大并发链接数
     # multi_accept on; 
-}
+}```
 
 #设定http服务器，利用它的反向代理功能提供负载均衡支持
+```
 http {
-     #设定mime类型,类型由mime.type文件定义
+  #设定mime类型,类型由mime.type文件定义
     include       /etc/nginx/mime.types;
     default_type  application/octet-stream;
     #设定日志格式
@@ -114,12 +116,13 @@ http {
      
      }
 }
-
+```
 以上是一些基本的配置,使用Nginx最大的好处就是负载均衡
 
 如果要使用负载均衡的话,可以修改配置http节点如下：
 
 #设定http服务器，利用它的反向代理功能提供负载均衡支持
+```
 http {
      #设定mime类型,类型由mime.type文件定义
     include       /etc/nginx/mime.types;
@@ -182,3 +185,4 @@ http {
 
      }
 }
+```

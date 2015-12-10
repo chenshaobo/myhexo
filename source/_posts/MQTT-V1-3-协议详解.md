@@ -7,19 +7,21 @@ MQTT 协议详解
 
 预览
 ====
+```
     %%        7   6   5   4      3     2   1      0
     byte1     message_type   dupflag   QoSLV   RETAIN
     byte2     Remaining Length
     byte3      Variable header
     byten       ....
                     MSG
-
+```
 Fixed header（固定头部）
 ====
+```
     %%        7   6   5   4      3     2   1      0
     byte1     message_type   dupflag   QoSLV   RETAIN
     byte2     Remaining Length
-
+```
 * message_type:消息类型，第4-7位比特，不同的值表示不同的意思，具体如下：
     1. 1 ：CONNECT,客户端请求连接服务器	       
     2. 2 : CONNACK,连接应答

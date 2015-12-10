@@ -8,7 +8,7 @@ Erlang 发送邮件相关问题
 1. 协议相关
 =====
 一封邮件的发送的协议格式如下：
-
+```php
 	"HELO XXX\r\n"
 	"AUTH LOGIN \r\r"
 	"$Account\r\n" ($Account为账号需要经过base64 encoding）
@@ -22,6 +22,7 @@ Erlang 发送邮件相关问题
 	"$DATA\r\n\r\n" (正文内容）
 	"\r\n.\r\n"(结束）
 	"QUIT\r\n"(退出）
+```
 
 2.乱码问题
 =====
