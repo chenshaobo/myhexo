@@ -47,15 +47,8 @@
 </article>
 
 <% if (!index && config.changyan){ %>
-<section id="comments" sid= "<%- parseInt(date_xml(post.date).replace(/[^0-9]/g,""))  %>" >
- <!--高速版-->
-<div id="SOHUCS" sid = "<%- parseInt(date_xml(post.date).replace(/[^0-9]/g,""))  %>" ></div>
-<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
-<script type="text/javascript">
-    window.changyan.api.config({
-        appid: 'cys0iXAGa',
-        conf: 'prod_31256952d71e3e29f6c0efe4734eba6f'
-    });
-</script> 
-</section>
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2033782"></script>
+<!-- UY END -->
 <% } %>
