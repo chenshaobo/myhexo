@@ -75,6 +75,7 @@ tag_generator:
 ## Themes: http://hexo.io/themes/
 #theme: hexo-theme-next
 changyan: true
+ads: true
 theme: athena
 sitemap: 
 path: sitemap.xml
