@@ -74,6 +74,7 @@ tag_generator:
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
 #theme: hexo-theme-next
+google_ad: true
 changyan: true
 ads: true
 theme: athena
