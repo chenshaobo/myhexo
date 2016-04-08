@@ -88,6 +88,6 @@ deploy:
    branch: master
   
  - type: git
-   repo: git@gitcafe.com:chenshaobo/chenshobo.git
-   branch: gh-pages
+   repo: git@git.coding.net:csb/csb.git
+   branch: coding-pages
 
