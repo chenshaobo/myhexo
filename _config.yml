@@ -87,7 +87,7 @@ deploy:
    repo: git@github.com:chenshaobo/chenshaobo.github.io.git
    branch: master
   
- - type: git
-   repo: git@git.coding.net:csb/csb.git
-   branch: coding-pages
+# - type: git
+#   repo: git@git.coding.net:csb/csb.git
+#   branch: coding-pages
 
