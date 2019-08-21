@@ -84,7 +84,7 @@ path: sitemap.xml
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
  - type: git
-   repo: git@github.com:chenshaobo/chenshaobo.github.io.git
+   repo: git@github.com:chenshaobo/bobo.github.io.git
    branch: master
   
  - type: git
