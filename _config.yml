@@ -38,9 +38,9 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
-  line_number: true
-  auto_detect: true
+  enable: false
+  line_number: false
+  auto_detect: false
   tab_replace:
 
 # Category & Tag
@@ -77,7 +77,7 @@ tag_generator:
 google_ad: true
 changyan: true
 ads: true
-theme: athena
+theme: Material-T
 sitemap: 
 path: sitemap.xml
 # Deployment
