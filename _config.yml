@@ -80,6 +80,7 @@ ads: true
 theme: Material-T
 sitemap: 
 path: sitemap.xml
+google_analytics: UA-69296305-6
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
